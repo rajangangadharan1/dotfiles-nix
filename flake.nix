@@ -43,6 +43,12 @@
           modules = [ ./home-manager/james/mac.nix ];
           extraSpecialArgs = { inherit self; };
         };
+
+        "rajan@wsl" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          modules = [ ./home-manager/rajan/wsl.nix ];
+          extraSpecialArgs = { inherit self; };
+        };
       };
     };
 }
